@@ -1,0 +1,7 @@
+.root{
+    -fx-font-family: "Comic Sans MS";
+}
+
+#titleLabel{
+    -fx-font-size: 20px;
+}

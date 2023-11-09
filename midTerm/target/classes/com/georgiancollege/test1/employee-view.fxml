@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #FFB84C;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.georgiancollege.test1.EmployeeController">
+   <children>
+      <BorderPane layoutX="150.0" layoutY="57.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Label id="titleLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="274.0" text="Employee List" textAlignment="CENTER" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="employeeIdColumn" prefWidth="75.0" text="Employee #" />
+                <TableColumn fx:id="firstNameColumn" prefWidth="75.0" text="First Name" />
+                  <TableColumn fx:id="lastNameColumn" prefWidth="75.0" text="Last Name" />
+                  <TableColumn fx:id="addressColumn" prefWidth="75.0" text="Address" />
+                  <TableColumn fx:id="cityColumn" prefWidth="75.0" text="City" />
+                  <TableColumn fx:id="provinceColumn" prefWidth="75.0" text="Province" />
+                  <TableColumn fx:id="phoneColumn" prefWidth="75.0" text="Phone" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <BorderPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </BorderPane.margin>
+            </TableView>
+         </center>
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="58.0" prefWidth="600.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <CheckBox fx:id="ontarioOnlyCheckBox" mnemonicParsing="false" onAction="#ontarioOnlyCheckBox_OnClick" text="Ontario only" />
+                  <ComboBox fx:id="areaCodeComboBox" onAction="#areaCodeComboBox_OnClick" prefWidth="150.0" promptText="Select Area Code" />
+                  <Label fx:id="noOfEmployeesLabel" text="No. of Employees: " />
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
